@@ -456,7 +456,7 @@ void loop() {
 
     default:
       std::cout << "Got invalid action; quitting\n";
-      // Delete subtree with root as subtree
+      delete_tree(root);
       return;
     }
   }
