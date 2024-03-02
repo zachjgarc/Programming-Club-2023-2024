@@ -54,7 +54,7 @@ int exp_sum(int n) {
 }
 
 void set_at_fill(std::string *into, int at, char c) {
-  int fill = at - into->size() ;
+  int fill = at - into->size() + 1;
   if (fill > 0) {
     into->append(fill, ' ');
   }
