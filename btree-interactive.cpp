@@ -342,8 +342,13 @@ void loop() {
     to_string_pretty(root, cursor, &buffer);
     clear_screen();
 
-    std::cout << buffer << "\nDepth: " << cursor.path->size() + 1 << "\n\n"
-              << ctrl_fmt << '\n';
+    std::cout << buffer << '\n';
+
+    if (root != nullptr) {
+      std::cout << "Depth: " << cursor.path->size() + 1 << "\n\n";
+    }
+
+    std::cout << ctrl_fmt << '\n';
 
     if (foolish) {
       std::cout << "\nYou may only delete nodes with only one child.";
