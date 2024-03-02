@@ -54,7 +54,7 @@ int exp_sum(int n) {
 }
 
 void set_at_fill(std::string *into, int at, char c) {
-  int fill = at - into->size() + 1;
+  int fill = at - into->size() ;
   if (fill > 0) {
     into->append(fill, ' ');
   }
@@ -345,7 +345,7 @@ void loop() {
     std::cout << buffer << '\n';
 
     if (root != nullptr) {
-      std::cout << "Depth: " << cursor.path->size() + 1 << "\n\n";
+      std::cout << "Depth: " << cursor.path->size() << "\n\n";
     }
 
     std::cout << ctrl_fmt << '\n';
